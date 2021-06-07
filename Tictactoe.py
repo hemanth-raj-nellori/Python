@@ -1,3 +1,4 @@
+# Define the grid
 grid = ["-", "-", "-",
         "-", "-", "-",
         "-", "-", "-"]
@@ -6,7 +7,7 @@ game_running = True
 winner = None
 cur_player = "X"
 
-
+# Display the grid
 def display_grid():
     print("\n")
     print(grid[0] + " | " + grid[1] + " | " + grid[2] + "     1 | 2 | 3")
@@ -34,7 +35,7 @@ def handle_turn(player):
     grid[pos] = player
     display_grid()
 
-
+# Flip player
 def flip_player():
     global cur_player
     if cur_player == "X":
@@ -142,4 +143,5 @@ def check_diagonal():
         return None
 
 
+# Play game
 play_game()
